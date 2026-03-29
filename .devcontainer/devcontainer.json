@@ -1,0 +1,27 @@
+{
+  "name": "Triple Confirmation Backtester",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postCreateCommand": "pip install -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "ms-toolsai.vscode-jupyter-slideshow"
+      ],
+      "settings": {
+        "jupyter.askForKernelRestart": false,
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 1000
+      }
+    }
+  },
+  "forwardPorts": [8888],
+  "portsAttributes": {
+    "8888": {
+      "label": "Jupyter Lab",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
